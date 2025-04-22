@@ -26,19 +26,15 @@ export class ContactComponent {
   onSubmit() {
     this.submitted = true;
     this.error = false;
-
     if (this.contactForm.invalid) {
       return;
     }
-
-    // Replace with your actual Formspree form ID
     const formspreeEndpoint = 'https://formspree.io/f/mdkgnvkd';
-
     this.http.post(formspreeEndpoint, {
       name: this.contactForm.value.name,
       email: this.contactForm.value.email,
       message: this.contactForm.value.message,
-      _subject: 'New Contact Form Submission' // Optional subject
+      _subject: 'New Contact Form Submission'
     }).subscribe({
       next: () => {
         this.success = true;

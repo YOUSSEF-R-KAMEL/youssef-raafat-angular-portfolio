@@ -1,50 +1,11 @@
-<div class="skills mt-20 text-center">
-  <h2 class="text-3xl font-semibold text-blue-500 mb-10">Skills</h2>
-
+<div class="skills pt-5 md:pt-0 text-center pb-5">
+  <h2 class="text-3xl font-semibold mb-10">Skills</h2>
   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-10 gap-x-6">
-    <div class="flex flex-col items-center space-y-2">
-      <img src="images/skills/html.png" class="w-1/2 drop-shadow-lg" alt="HTML" />
-      <p>HTML5</p>
-    </div>
-    <div class="flex flex-col items-center space-y-2">
-      <img src="images/skills/css.png" class="w-1/2 drop-shadow-lg" alt="CSS" />
-      <p>CSS3</p>
-    </div>
-    <div class="flex flex-col items-center space-y-2">
-      <img src="images/skills/sass.png" class="w-1/2 drop-shadow-lg" alt="Sass" />
-      <p>Sass</p>
-    </div>
-    <div class="flex flex-col items-center space-y-2">
-      <img src="images/skills/tailwind.png" class="w-1/2 drop-shadow-lg" alt="Tailwind" />
-      <p>Tailwind</p>
-    </div>
-    <div class="flex flex-col items-center space-y-2">
-      <img src="images/skills/js.png" class="w-1/2 drop-shadow-lg" alt="Javascript" />
-      <p>Javascript</p>
-    </div>
-    <div class="flex flex-col items-center space-y-2">
-      <img src="images/skills/typescript.png" class="w-1/2 drop-shadow-lg" alt="TypeScript" />
-      <p>TypeScript</p>
-    </div>
-    <div class="flex flex-col items-center space-y-2">
-      <img src="images/skills/angular.png" class="w-1/2 drop-shadow-lg" alt="Angular" />
-      <p>Angular +19</p>
-    </div>
-    <div class="flex flex-col items-center space-y-2">
-      <img src="images/skills/angular-material.png" class="w-1/2 drop-shadow-lg" alt="Angular Material" />
-      <p>Angular Material</p>
-    </div>
-    <div class="flex flex-col items-center space-y-2">
-      <img src="images/skills/primeng.png" class="w-1/2 drop-shadow-lg" alt="PrimeNg" />
-      <p>PrimeNg</p>
-    </div>
-    <div class="flex flex-col items-center space-y-2">
-      <img src="images/skills/primeflex.jpg" class="w-1/2 drop-shadow-lg" alt="Primeflex" />
-      <p>Primeflex</p>
-    </div>
-    <div class="flex flex-col items-center space-y-2">
-      <img src="images/skills/github.png" class="w-1/2 drop-shadow-lg" alt="Github" />
-      <p>Github</p>
-    </div>
+    @for (skill of skills; track $index) {
+      <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <img [src]="'images/skills/' + skill.imageUrl" class="w-1/2 drop-shadow-lg" [alt]="skill.name" />
+        <p>{{ skill.name }}</p>
+      </div>
+    }
   </div>
 </div>

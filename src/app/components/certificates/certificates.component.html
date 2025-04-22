@@ -1,4 +1,7 @@
-<swiper-container
+<div class="pt-5 md:pt-0 md:pt-0">
+  <h2 class="text-3xl font-bold text-center mb-8">Certificates</h2>
+  <swiper-container
+  data-aos="zoom-in"
   loop="true"
   class="swiper"
   effect="coverflow"
@@ -11,11 +14,11 @@
   autoplay-delay="3000"
   autoplay-disable-on-interaction="false"
   navigation="true"
-
 >
   @for (certificate of certificates; track $index) {
     <swiper-slide>
-      <img [src]="certificate" alt="Certificate" class="img-fluid">
+      <img [src]="'images/certificate/' + certificate" alt="Certificate" class="img-fluid">
     </swiper-slide>
   }
 </swiper-container>
+</div>

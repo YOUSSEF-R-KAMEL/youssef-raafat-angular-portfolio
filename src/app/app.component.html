@@ -1,5 +1,4 @@
 <div class="container m-auto">
-  <app-nav></app-nav>
   <!-- <app-header></app-header>
   <app-about-and-skills></app-about-and-skills>
   <app-services></app-services>
@@ -7,7 +6,8 @@
   <app-certificates></app-certificates>
   <app-contact></app-contact> -->
   <div class="min-h-screen">
-    <div class="mx-auto my-40">
+    <app-nav></app-nav>
+    <div class="mx-auto md:my-40">
       <router-outlet></router-outlet>
     </div>
   </div>

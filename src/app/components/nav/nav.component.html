@@ -1,33 +1,29 @@
-<!-- Navbar -->
 <nav class="flex justify-between items-center px-6 py-4 shadow-md relative">
   <div class="font-bold text-2xl">Portfolio</div>
-
   <!-- Hamburger / Close Icon -->
-  <button class="md:hidden text-2xl z-50 cursor-pointer" (click)="toggleMenu()">
+  <button class="lg:hidden text-2xl z-50 cursor-pointer" (click)="toggleMenu()">
     <i class="fas hover:text-blue-500" [ngClass]="isMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
   </button>
-
   <!-- Mobile Menu -->
   <ul
-    class="mob-menu absolute rounded-md top-full w-1/2 right-5 bg-second flex flex-col items-start space-y-4 px-6 py-4 shadow-md transition-all duration-300 ease-in-out z-40 md:hidden"
+    class="mob-menu absolute rounded-md top-full w-1/2 right-5 bg-second flex flex-col items-start space-y-4 px-6 py-4 shadow-md transition-all duration-300 ease-in-out z-40 lg:hidden"
     [ngClass]="{ 'max-h-96 opacity-100 visible': isMenuOpen, 'max-h-0 opacity-0 invisible overflow-hidden': !isMenuOpen }"
   >
-    <li><a routerLink="home" routerLinkActive="active"  class="block transition-all duration-300 hover:text-blue-500">Home</a></li>
-    <li><a routerLink="about-me" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500">About me</a></li>
-    <li><a routerLink="skills" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500">Skills</a></li>
-    <li><a routerLink="services" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500">Services</a></li>
-    <li><a routerLink="projects" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500">Projects</a></li>
-    <li><a routerLink="certificates" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500">Certificates</a></li>
-    <li><a routerLink="contact" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500">Contact</a></li>
+    <li><a routerLink="home" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500" (click)="closeMenu()">Home</a></li>
+    <li><a routerLink="about-me" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500" (click)="closeMenu()">About me</a></li>
+    <li><a routerLink="skills" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500" (click)="closeMenu()">Skills</a></li>
+    <li><a routerLink="services" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500" (click)="closeMenu()">Services</a></li>
+    <li><a routerLink="projects" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500" (click)="closeMenu()">Projects</a></li>
+    <li><a routerLink="certificates" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500" (click)="closeMenu()">Certificates</a></li>
+    <li><a routerLink="contact" routerLinkActive="active" class="block transition-all duration-300 hover:text-blue-500" (click)="closeMenu()">Contact</a></li>
   </ul>
-
   <!-- Desktop Menu -->
-  <ul class="hidden md:flex space-x-6 text-sm">
+  <ul class="hidden lg:flex space-x-6 text-sm">
     <li><a routerLink="home" routerLinkActive="active" class="text-xl transition-all duration-300 hover:text-blue-500">Home</a></li>
     <li><a routerLink="about-me" routerLinkActive="active" class="text-xl transition-all duration-300 hover:text-blue-500">About me</a></li>
     <li><a routerLink="skills" routerLinkActive="active" class="text-xl transition-all duration-300 hover:text-blue-500">Skills</a></li>
     <li><a routerLink="services" routerLinkActive="active" class="text-xl transition-all duration-300 hover:text-blue-500">Services</a></li>
-    <li><a routerLink="projects" routerLinkActive="active" class="text-xl transition-all duration-300 hover:text-blue-500">Portfolio</a></li>
+    <li><a routerLink="projects" routerLinkActive="active" class="text-xl transition-all duration-300 hover:text-blue-500">Projects</a></li>
     <li><a routerLink="certificates" routerLinkActive="active" class="text-xl transition-all duration-300 hover:text-blue-500">Certificates</a></li>
     <li><a routerLink="contact" routerLinkActive="active" class="text-xl transition-all duration-300 hover:text-blue-500">Contact</a></li>
   </ul>

@@ -1,0 +1,13 @@
+<!-- LAUNCHER NAV -->
+<nav class="py-8">
+  <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-7 gap-0">
+    @for (item of menuItems; track $index) {
+      <div class="flex justify-center mb-3">
+        <a [routerLink]="item.link" routerLinkActive="active" class="flex flex-col items-center space-y-2 transition-all duration-300 hover:text-blue-500">
+          <img [src]="item.icon" [alt]="item.label" class="w-10 h-10 animate-zoomIn" />
+          <span class="text-sm font-medium animate-zoomIn">{{ item.label }}</span>
+        </a>
+      </div>
+    }
+  </div>
+</nav>

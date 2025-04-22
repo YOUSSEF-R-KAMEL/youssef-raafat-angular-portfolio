@@ -10,13 +10,13 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 })
 export class CertificatesComponent {
   certificates = [
-    'images/certificate/certi_01.png',
-    'images/certificate/certi_02.png',
-    'images/certificate/certi_03.png',
-    'images/certificate/certi_04.png',
-    'images/certificate/certi_05.jpg',
-    'images/certificate/certi_06.png',
-    'images/certificate/certi_07.png',
-    'images/certificate/certi_08.png',
+    'certi_01.png',
+    'certi_02.png',
+    'certi_03.png',
+    'certi_04.png',
+    'certi_05.jpg',
+    'certi_06.png',
+    'certi_07.png',
+    'certi_08.png',
   ];
 }

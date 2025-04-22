@@ -23,3 +23,61 @@
     height: 400px;
   }
 }
+/* Typing animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Apply the animation to the span */
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 70%;
+  animation: typing 4s steps(40) 2s forwards, blink-caret 0.75s step-end infinite, repeatTyping 5s infinite;
+}
+
+/* Cursor blinking effect */
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typing-animation {
+  border-right: 3px solid;
+}
+
+/* Repeat typing every 5 seconds */
+@keyframes repeatTyping {
+  0%, 100% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 8rem !important;
+    }
+  }
+  @keyframes repeatTyping {
+    0%, 100% {
+      width: 0;
+    }
+    50% {
+      width: 8rem !important;
+    }
+  }
+}
