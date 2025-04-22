@@ -20,12 +20,12 @@ This portfolio also highlights some of the projects I've worked on and my journe
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** Angular, TypeScript, HTML, CSS (Tailwind CSS, SCSS)
+- **Frontend:** Angular 19, TypeScript, HTML, CSS (Tailwind CSS, SCSS)
 - **State Management:** RxJS
-- **UI Frameworks:** Angular Material, PrimeNG
+- **UI Frameworks:** Tailwind
 - **Build Tools:** Webpack, Angular CLI
 - **Version Control:** Git, GitHub
-- **Other Tools:** Figma (UI/UX design), Postman (API testing)
+- **Other Tools:** Figma (UI/UX design)
 
 ---
 
