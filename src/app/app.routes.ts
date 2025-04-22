@@ -1,21 +1,15 @@
 import { Routes } from '@angular/router';
-import { ServicesComponent } from './components/services/services.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { CertificatesComponent } from './components/certificates/certificates.component';
 import { HomeComponent } from './components/home/home.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { AboutMeComponent } from './components/about-me/about-me.component';
-import { SkillsComponent } from './components/skills/skills.component';
 
 export const routes: Routes = [
-  {path: "", redirectTo: 'home', pathMatch: 'full'},
-  {path: "home", component: HomeComponent},
-  {path: "about-me", component: AboutMeComponent},
-  {path: "skills", component: SkillsComponent},
-  {path: "services", component: ServicesComponent},
-  {path: "projects", component: ProjectsComponent},
-  {path: "certificates", component: CertificatesComponent},
-  {path: "contact", component: ContactComponent},
-  {path: "**", redirectTo: 'home', pathMatch: 'full'},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'about-me', loadComponent: () => import('./components/about-me/about-me.component').then(m => m.AboutMeComponent) },
+  { path: 'skills', loadComponent: () => import('./components/skills/skills.component').then(m => m.SkillsComponent) },
+  { path: 'services', loadComponent: () => import('./components/services/services.component').then(m => m.ServicesComponent) },
+  { path: 'projects', loadComponent: () => import('./components/projects/projects.component').then(m => m.ProjectsComponent) },
+  { path: 'certificates', loadComponent: () => import('./components/certificates/certificates.component').then(m => m.CertificatesComponent) },
+  { path: 'contact', loadComponent: () => import('./components/contact/contact.component').then(m => m.ContactComponent) },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 
 ];
