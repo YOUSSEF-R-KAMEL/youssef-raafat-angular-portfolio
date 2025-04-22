@@ -74,6 +74,7 @@ Then open `http://localhost:4200/` in your browser.
 ```bash
 ng build --configuration production
 ```
+
 ---
 
 ### 📱 Contact
