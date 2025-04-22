@@ -1,0 +1,99 @@
+<section class="max-w-4xl mx-auto px-4 py-8">
+  <h2 class="text-3xl font-bold text-center text-blue-500 mb-8">Contact Us</h2>
+
+  <div class="grid md:grid-cols-2 gap-8">
+    <!-- Contact Information -->
+    <div class="space-y-6">
+      <div class="p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <h3 class="text-xl font-semibold text-blue-500 mb-3">Get In Touch</h3>
+        <p class="leading-relaxed mb-4">
+          Have a project in mind or questions about our services? Iam here to help.
+        </p>
+        <div class="space-y-3">
+          <p class="flex items-center">
+            <i class="fas fa-envelope text-blue-500"></i> &nbsp; se.youssefrafat&#64;gmail.com
+          </p>
+          <p class="flex items-center">
+            <i class="fas fa-phone text-blue-500"></i> &nbsp; +20 1278004938
+          </p>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <h3 class="text-xl font-semibold text-blue-500 mb-3">Collaboration</h3>
+        <p class=" leading-relaxed">
+          Interested in working together? We welcome partnership opportunities
+          and are open to discussing your Angular project needs.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+      <h3 class="text-xl font-semibold text-blue-500 mb-4">Send a Message</h3>
+
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-4">
+        <!-- Name Field -->
+        <div>
+          <label for="name" class="block text-sm font-medium mb-1 cursor-pointer">Name</label>
+          <input type="text" id="name" formControlName="name"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 cursor-pointer"
+                placeholder="ex. ahmed ali">
+          @if (submitted && contactForm.get('name')?.errors) {
+            <div class="text-red-500 text-sm">
+              Name is required
+            </div>
+          }
+        </div>
+
+        <!-- Email Field -->
+        <div>
+          <label for="email" class="block text-sm font-medium mb-1 cursor-pointer">Email</label>
+          <input type="email" id="email" formControlName="email"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 cursor-pointer"
+                placeholder="ex. ahmed@mail.com">
+          @if (submitted && contactForm.get('email')?.errors) {
+            <div class="text-red-500 text-sm">
+              @if (contactForm.get('email')?.errors?.['required']) {
+                Email is required
+              }
+              @if (contactForm.get('email')?.errors?.['email']) {
+                Valid email is required
+              }
+            </div>
+          }
+        </div>
+
+        <!-- Message Field -->
+        <div>
+          <label for="message" class="block text-sm font-medium mb-1 cursor-pointer">Message</label>
+          <textarea id="message" formControlName="message" rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 cursor-pointer"
+                    placeholder="Your message..."></textarea>
+          @if (submitted && contactForm.get('message')?.errors) {
+            <div class="text-red-500 text-sm">
+              Message is required
+            </div>
+          }
+        </div>
+
+        @if (success) {
+          <div class="p-3 bg-green-100 text-green-700 rounded-md">
+            Thank you! Your message has been sent successfully.
+          </div>
+        }
+
+        @if (error) {
+          <div class="p-3 bg-red-100 text-red-700 rounded-md">
+            {{ errorMessage }}
+          </div>
+        }
+
+        <button type="submit"
+                class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

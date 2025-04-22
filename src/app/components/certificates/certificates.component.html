@@ -1,0 +1,21 @@
+<swiper-container
+  loop="true"
+  class="swiper"
+  effect="coverflow"
+  grab-cursor="true"
+  centered-slides="true"
+  slides-per-view="auto"
+  coverflow-effect-rotate="50"
+  coverflow-effect-stretch="0"
+  autoplay="true"
+  autoplay-delay="3000"
+  autoplay-disable-on-interaction="false"
+  navigation="true"
+
+>
+  @for (certificate of certificates; track $index) {
+    <swiper-slide>
+      <img [src]="certificate" alt="Certificate" class="img-fluid">
+    </swiper-slide>
+  }
+</swiper-container>

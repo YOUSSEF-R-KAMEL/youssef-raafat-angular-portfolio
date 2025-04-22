@@ -1,0 +1,31 @@
+<section id="projects" class="projects text-center py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-12 text-blue-500">My Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      @for (project of projects; track $index) {
+        <div class="card rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" >
+          <h4 class="text-xl font-semibold my-6">{{ project.title }}</h4>
+          <a [href]="project.liveLink" target="_blank">
+            <img [src]="project.img" [alt]="project.title" class="w-full h-[185px] object-cover" />
+          </a>
+          <div class="flex justify-between items-center m-4">
+            <a
+              [href]="project.liveLink"
+              target="_blank"
+              class="btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+            >
+              Live Demo
+            </a>
+            <a
+              [href]="project.sourceCode"
+              target="_blank"
+              class="btn bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900 transition"
+            >
+              Source Code
+            </a>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

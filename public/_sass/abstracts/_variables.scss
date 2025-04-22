@@ -1,0 +1,18 @@
+$main-color: #020b24;
+$second-color: #071743;
+
+.main-color {
+  color: $main-color;
+}
+
+.bg-main {
+  background-color: $main-color;
+}
+
+.second-color {
+  color: $second-color;
+}
+
+.bg-second {
+  background-color: $second-color;
+}

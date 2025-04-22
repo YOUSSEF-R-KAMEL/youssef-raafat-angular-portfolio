@@ -1,0 +1,10 @@
+.skills {
+  img {
+    transition: transform 0.3s ease;
+    border-radius: 6px;
+    box-shadow: 0 0 80px rgba(13, 110, 253, 0.3);
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
