@@ -36,15 +36,14 @@ your-portfolio-project/
 │── src/
 │   ├── app/
 │   │   ├── components/
-│   │   │   ├── header/           # Header component (navbar, etc.)
-│   │   │   ├── footer/           # Footer component
-│   │   │   ├── about/            # About me section
-│   │   │   ├── skills/           # Skills section
-│   │   │   ├── projects/         # Projects section
-│   │   │   ├── contact/          # Contact form
-│   │   │   ├── experience/       # Work experience section
-│   │   │   ├── testimonials/     # Testimonials section
-│   │   │   ├── education/        # Education section
+│   │   │   ├── nav/              # fixed nav
+│   │   │   ├── home/             # main component
+│   │   │   ├── about-me/         # about-me component
+│   │   │   ├── skills/           # Skills component
+│   │   │   ├── services/         # Services component
+│   │   │   ├── projects/         # Projects component
+│   │   │   ├── certificates/     # Certificates component
+│   │   │   ├── contact/          # Contact component
 │── assets/
 │   ├── images/                   # Images like profile picture, project images, etc.
 │   ├── icons/                    # Icons for UI elements
