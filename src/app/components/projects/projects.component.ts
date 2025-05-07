@@ -15,6 +15,12 @@ export class ProjectsComponent {
       sourceCode: 'https://github.com/YOUSSEF-R-KAMEL/eCommerce-Fast-Store'
     },
     {
+      title: 'Digital Bond',
+      img: 'digital_bond.png',
+      liveLink: 'https://digital-bond-task-phi.vercel.app/',
+      sourceCode: 'https://github.com/YOUSSEF-R-KAMEL/digital-bond-task'
+    },
+    {
       title: 'Project Management System',
       img: 'pms.png',
       liveLink: 'https://project-management-system-zeta.vercel.app/#/auth/login',
