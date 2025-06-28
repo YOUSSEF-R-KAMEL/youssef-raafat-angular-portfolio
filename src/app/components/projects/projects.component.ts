@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
   projects = [
-    {
-      title: 'UK Business Portal',
-      img: 'UK-business-portal.png',
-      liveLink: 'https://uk-business-portal-ja69.vercel.app/login',
-      sourceCode: 'https://github.com/YOUSSEF-R-KAMEL/UK-business-portal'
-    },
+    // {
+    //   title: 'UK Business Portal',
+    //   img: 'UK-business-portal.png',
+    //   liveLink: 'https://uk-business-portal-ja69.vercel.app/login',
+    //   sourceCode: 'https://github.com/YOUSSEF-R-KAMEL/UK-business-portal'
+    // },
     {
       title: 'Ecommerce Fast Store',
       img: 'ecommerce_fast_store.png',
