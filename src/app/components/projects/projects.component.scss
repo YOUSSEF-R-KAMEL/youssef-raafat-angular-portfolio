@@ -1,4 +1,5 @@
 .projects {
+    // overflow: hidden;
   .card {
     transition: transform 0.3s ease;
     box-shadow: 0 0 80px rgba(13, 110, 253, 0.3);
@@ -12,4 +13,10 @@
       object-fit: cover;
     }
   }
+}
+
+/* ensure content sits above Vanta background inside the section */
+.projects > .max-w-6xl, .projects .max-w-6xl {
+  position: relative;
+  z-index: 1;
 }

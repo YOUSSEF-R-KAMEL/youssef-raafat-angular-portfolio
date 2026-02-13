@@ -12,8 +12,7 @@
   img {
     width: 100%;
     height: auto;
-    border-radius: 50%;
-    transform: translateX(-13px);
+    transform: translate(0, -48px);
   }
 }
 
@@ -21,6 +20,9 @@
   .profile-img-container {
     width: 350px !important;
     height: 400px;
+  }
+    img {
+    transform: translate(0, -35px) !important;
   }
 }
 /* Typing animation */

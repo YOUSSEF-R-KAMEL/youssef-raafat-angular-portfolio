@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VantaBgComponent } from '../vanta-bg/vanta-bg.component';
 
 @Component({
   selector: 'app-projects',
