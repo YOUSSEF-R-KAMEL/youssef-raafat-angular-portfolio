@@ -5,8 +5,8 @@
       @for (service of services; track $index) {
         <div class="service-card pt-8 p-5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
         data-aos="zoom-in" data-aos-offset="450" data-aos-duration="1500">
-          <img [src]="'images/services/' + service.img" alt="">
-          <h3 class="service-title text-2xl font-bold text-center skills-800 mt-4 mb-4">{{ service.title }}</h3>
+          <img [src]="'images/services/' + service.img" alt="service image" class="service-image w-full object-content rounded-md mb-4">
+          <h3 class="service-title text-2xl font-bold text-center skills-800 mt-4 mb-6">{{ service.title }}</h3>
           <p class="service-description skills-600 leading-relaxed;">{{ service.description }}</p>
         </div>
       }

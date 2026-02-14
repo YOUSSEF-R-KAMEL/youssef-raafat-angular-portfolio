@@ -16,18 +16,7 @@ export class VantaBgComponent implements OnInit, OnDestroy {
     this.initVanta();
   }
 
-  ngOnDestroy(): void {
-    if (this.vantaEffect) this.vantaEffect.destroy();
-  }
-
-  @HostListener('window:resize')
-  onResize() {
-    // Destroy and re-initialize on resize for clarity
-    if (this.vantaEffect) this.vantaEffect.destroy();
-    this.initVanta();
-  }
-
-  private initVanta() {
+  initVanta() {
     this.vantaEffect = NET({
       el: this.vantaRef.nativeElement,
       THREE: THREE,
@@ -41,5 +30,9 @@ export class VantaBgComponent implements OnInit, OnDestroy {
       color: 0x2724d4,
       maxDistance: 0
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.vantaEffect) this.vantaEffect.destroy();
   }
 }

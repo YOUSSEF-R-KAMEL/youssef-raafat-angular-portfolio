@@ -7,8 +7,8 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       @for (item of projects; track $index) {
       <div
-        class="card rounded-xl shadow-lg overflow-hidden bg-gray-800 hover:shadow-2xl transform hover:scale-105 transition duration-500"
-        data-aos="zoom-in" data-aos-duration="1500">
+        class="card rounded-xl shadow-lg overflow-hidden bg-gray-800 hover:shadow-2xl transform"
+        data-aos="zoom-in" data-aos-duration="1000">
         <h4 class="text-xl font-semibold my-4 px-4 text-white">{{ item.title }}</h4>
 
         <a [href]="item.liveLink" target="_blank">
@@ -22,7 +22,7 @@
             Live Demo
           </a>
           <a [href]="item.sourceCode" target="_blank"
-            class="btn bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900 transition">
+            class="btn bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-900 transition">
             Source Code
           </a>
         </div>
